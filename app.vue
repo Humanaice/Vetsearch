@@ -2,6 +2,7 @@
   <NuxtLayout>
     <div>
       <p>Hello World</p>
+      <i class="fa-solid fa-user"></i>
     </div>
     <v-expansion-panels>
       <v-expansion-panel

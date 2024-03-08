@@ -5,5 +5,6 @@ export default defineNuxtConfig({
   modules: [
     'vuetify-nuxt-module'
   ],
+  css: ["~/assets/main.css"],
 });
 
