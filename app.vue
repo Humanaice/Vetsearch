@@ -5,17 +5,18 @@
       <i class="fa-solid fa-user"></i>
     </div>
     <v-expansion-panels>
-      <v-expansion-panel
-        title="Title"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima"
-      >
+      <v-expansion-panel title="Title"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima">
       </v-expansion-panel>
     </v-expansion-panels>
   </NuxtLayout>
 </template>
 
+<script>
+</script>
+
 <style scoped>
-  .page {
-    background-color: white;
-  }
+.page {
+  background-color: white;
+}
 </style>
