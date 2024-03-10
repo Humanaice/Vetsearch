@@ -22,9 +22,29 @@
                     <v-app-bar-nav-icon class="" color="white" @click="DrawerChange()"></v-app-bar-nav-icon>
                 </v-col>
                 <v-navigation-drawer v-model="drawer" absolute location="right" color="#1a1939" disable-resize-watcher
-                    disable-route-watcher>
+                    disable-route-watcher :width="300">
+                    <v-list-item prepend-avatar="./../blank-profile-picture-973460_960_720.webp"></v-list-item>
                     <v-list-item>
-                        <span>A</span>
+                        <div>
+                            <v-expansion-panels>
+                                <v-expansion-panel>
+                                    <v-expansion-panel-title>
+                                        <template v-slot:default="{ expanded }">
+                                            <v-row no-gutters>
+                                                <v-col class="d-flex justify-start" cols="4">
+                                                    <v-avatar>
+                                                        <v-img alt="John"
+                                                            src="./../blank-profile-picture-973460_960_720.webp"></v-img></v-avatar>
+                                                </v-col>
+                                            </v-row>
+                                        </template>
+                                    </v-expansion-panel-title>
+                                    <v-expansion-panel-text>
+                                        <v-btn></v-btn>
+                                    </v-expansion-panel-text>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </div>
                     </v-list-item>
                 </v-navigation-drawer>
                 <v-col cols=1></v-col>
@@ -73,6 +93,9 @@ const DrawerChange = () => {
     drawer.value = !drawer.value;
 }
 
+const trip = reactive({ name: "", location: null, start: null, end: null })
+const locations = ref(['Australia', 'Barbados', 'Chile', 'Denmark', 'Ecuador', 'France']);
+
 </script>
 
 <style scoped>
@@ -91,5 +114,9 @@ const DrawerChange = () => {
     color: white;
     /* font-size: 35px; */
     padding: 0px 15px;
+}
+
+.expansion {
+    height: 50px;
 }
 </style>
