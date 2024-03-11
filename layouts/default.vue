@@ -12,11 +12,64 @@
                             style="color: white;">VET</span>SEARCH</span>
                 </v-col>
                 <v-col class="d-none d-lg-flex justify-end pr-0 " cols="2" offset="">
-                    <span class="">MY APPOINTMENTS</span>
+                    <v-menu open-on-hover location="bottom center">
+                        <template v-slot:activator="{ props }">
+                            <v-btn v-bind="props" variant="text">
+                                <span class="text-body-1">MY APPOINTMENTS</span>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item v-for="(Doctor, index) in appointments">
+                                <v-row class="d-flex align-center">
+                                    <v-col cols="3">
+                                        <v-avatar size="50">
+                                            <v-img :src="Doctor.image"></v-img>
+                                        </v-avatar>
+                                    </v-col>
+                                    <v-col cols="5">
+                                        <span class="overflow-x-auto">{{ Doctor.name }}</span>
+                                    </v-col>
+                                    <v-col cols="4">
+                                        <v-btn>INFO</v-btn>
+                                    </v-col>
+                                </v-row>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
                 </v-col>
                 <v-col class="d-none d-lg-flex justify-end" cols=2>
-                    <!-- <span class="pl-15">MY APPOINTMENTS</span> -->
-                    <span class="">MY ACCOUNT</span>
+                    <v-menu open-on-hover location="bottom center">
+
+                        <template v-slot:activator="{ props }">
+                            <v-btn v-bind="props" variant="text">
+                                <span class="text-body-1">MY ACCOUNT</span>
+                            </v-btn>
+                        </template>
+
+                        <v-list>
+                            <v-list-item v-for="(pet, index) in animal">
+                                <v-row class="d-flex align-center">
+                                    <v-col cols="3">
+                                        <v-avatar size="50">
+                                            <v-img :src="pet.image"></v-img>
+                                        </v-avatar>
+                                    </v-col>
+                                    <v-col cols="5">
+                                        <div class="overflow-x-auto" style="width: 100px;">
+                                            <span>
+                                                {{ pet.name }}
+                                            </span>
+                                        </div>
+
+                                    </v-col>
+                                    <v-col cols="4">
+                                        <v-btn>INFO</v-btn>
+                                    </v-col>
+                                </v-row>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                    <!-- <span class="">MY ACCOUNT</span> -->
                 </v-col>
                 <v-col class="d-flex d-lg-none justify-end" cols="1" offset="3">
                     <v-app-bar-nav-icon class="" color="white" @click="DrawerChange()"></v-app-bar-nav-icon>
@@ -57,6 +110,7 @@
                             <v-expansion-panels>
                                 <v-expansion-panel>
                                     <v-expansion-panel-title>
+
                                         <template v-slot:default="{ expanded }">
                                             <v-row no-gutters>
                                                 <v-col class="d-flex justify-start" cols="4">
@@ -136,7 +190,7 @@
             <slot />
         </div>
 
-        <v-footer app="true" class="pa-0">
+        <v-footer app class="pa-0">
             <v-container fluid class="footer">
                 <v-row>
                     <v-col cols="1"></v-col>
@@ -167,7 +221,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useDisplay } from 'vuetify'
 
 const { xs } = useDisplay()
@@ -216,9 +270,5 @@ const appointments = ref({
     color: white;
     /* font-size: 35px; */
     padding: 0px 15px;
-}
-
-.expansion {
-    height: 50px;
 }
 </style>
