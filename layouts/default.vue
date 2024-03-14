@@ -47,6 +47,23 @@
                         </template>
 
                         <v-list>
+                            <v-list-item class="pb-4 pl-0">
+                                <v-row class="pl-2">
+                                    <v-col cols="4" class="px-6">
+                                        <v-avatar size="80">
+                                            <v-img alt="John" src="/img/blankProfile.webp"></v-img>
+                                        </v-avatar>
+                                    </v-col>
+                                    <v-col cols="8" class="pl-2">
+                                        <div class="d-flex flex-column">
+                                            <span class="text-h5">Nome da Pessoa</span>
+                                            <span class="text-caption">email@gmail.com</span>
+                                            <span class="text-caption ">Logout</span>
+                                        </div>
+                                    </v-col>
+                                </v-row>
+                            </v-list-item>
+                            <v-divider></v-divider>
                             <v-list-item v-for="(pet, index) in animal">
                                 <v-row class="d-flex align-center">
                                     <v-col cols="3">
