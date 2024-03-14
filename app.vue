@@ -1,12 +1,13 @@
 <template>
   <NuxtLayout>
-    <v-container class="my-3 d-flex justify-center">
-      <div>
-        <v-row style="background-color: #474276; border-radius: 40px;color: white; padding: 10px 20px;">
-          <div class="pa-1">
+    <v-container class="my-6 d-flex justify-center">
+      <div class="w-75">
+        <v-row class="d-flex justify-center"
+          style="background-color: #474276; border-radius: 40px;color: white; padding: 10px 20px;">
+          <v-col lg="3" md="4" sm="6" cols="12" class="d-flex justify-md-center justify-sm-end justify-center pa-1">
             <span>I need a veterinarian in</span>
-          </div>
-          <div class="pa-1">
+          </v-col>
+          <v-col lg="3" md="4" sm="6" cols="12" class="d-flex justify-md-center justify-sm-start justify-center pa-1">
             <v-menu open-on-hover>
               <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" style="height: 25px;border-radius: 40px;">
@@ -21,11 +22,11 @@
                 </v-list-item>
               </v-list>
             </v-menu>
-          </div>
-          <div class="pa-1">
+          </v-col>
+          <v-col lg="1" md="1" sm="6" cols="12" class="d-flex justify-md-center justify-sm-end justify-center pa-1">
             <span>on the</span>
-          </div>
-          <div class="pa-1">
+          </v-col>
+          <v-col lg="2" md="3" sm="6" cols="12" class="d-flex justify-md-center justify-sm-start justify-center pa-1">
             <v-menu open-on-hover>
 
               <template v-slot:activator="{ props }">
@@ -41,7 +42,7 @@
                 </v-list-item>
               </v-list>
             </v-menu>
-          </div>
+          </v-col>
         </v-row>
       </div>
     </v-container>
@@ -52,7 +53,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid style="background-color: #cdddfc;" class="h-100">
+    <v-container fluid style="background-color: #cdddfc;" class="h-auto">
       <v-row class="d-flex justify-center">
         <v-col cols="12" class="d-flex justify-center">
           <span class="text-h5 text-center" style="color: #3b73ce;">Suggestions for you</span>
