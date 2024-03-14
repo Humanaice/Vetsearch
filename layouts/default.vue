@@ -190,7 +190,7 @@
             <slot />
         </div>
 
-        <v-footer app class="pa-0">
+        <div app class="pa-0">
             <v-container fluid class="footer">
                 <v-row>
                     <v-col cols="1"></v-col>
@@ -216,7 +216,7 @@
                     </v-col>
                 </v-row>
             </v-container>
-        </v-footer>
+        </div>
     </v-app>
 </template>
 
