@@ -6,5 +6,11 @@ export default defineNuxtConfig({
     'vuetify-nuxt-module'
   ],
   css: ["~/assets/main.css"],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,    
+    },
+  ],
 });
 

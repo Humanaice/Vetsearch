@@ -1,47 +1,54 @@
 <template>
   <NuxtLayout>
-    <div>
-      <p>Hello World</p>
-      <i class="fa-solid fa-user"></i>
-    </div>
-    <v-expansion-panels>
-      <v-expansion-panel title="Title"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima">
-      </v-expansion-panel>
-    </v-expansion-panels>
-    <div class="text-center">
-      <v-menu open-on-hover location="bottom center">
-        <template v-slot:activator="{ props }">
-          <v-btn color="primary" v-bind="props">
-            Dropdown
-          </v-btn>
-        </template>
+    <v-container class="my-3">
+      <v-row class="d-flex justify-center ma-3">
+      </v-row>
+    </v-container>
+    <v-container fluid style="background: linear-gradient(white 50%,#cdddfc 50%);">
+      <v-row class="d-flex justify-center">
+        <v-col cols="6" class="d-flex justify-center" style="background-color: #3b73ce; color:white">
+          <span class="text-h5">Find a veterinarian near you</span>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid style="background-color: #cdddfc;" class="h-100">
+      <v-row class="d-flex justify-center">
+        <v-col cols="12" class="d-flex justify-center">
 
-        <v-list>
-          <v-list-item v-for="(item, index) in items" :key="index">
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </div>
+        </v-col>
+        <v-col cols="12" class="d-flex justify-center">
+          <span>Suggestions for you</span>
+        </v-col>
+        <v-col cols="12" class="d-flex justify-center">
+          <v-row class="d-flex justify-center">
+            <DocNear class="pa-1"></DocNear>
+            <DocNear class="pa-1"></DocNear>
+            <DocNear class="pa-1"></DocNear>
+          </v-row>
+        </v-col>
+        <v-col cols="12" class="d-flex justify-center">
+          <span>Veterinarians near you</span>
+        </v-col>
+        <v-col cols="12" class="d-flex justify-center">
+
+        </v-col>
+      </v-row>
+    </v-container>
   </NuxtLayout>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    items: [
-      { title: 'Click MeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa' },
-      { title: 'Click Me' },
-      { title: 'Click Me' },
-      { title: 'Click Me 2' },
-    ],
-  }),
-}
+<script setup>
+import DocNear from './components/DocNear.vue';
 </script>
 
 <style scoped>
 .page {
   background-color: white;
+}
+
+.findVeterinarian {
+  background-color: #474276;
+  color: white;
+  border-radius: 40px;
 }
 </style>
