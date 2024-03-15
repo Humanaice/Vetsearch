@@ -48,13 +48,16 @@
     </v-container>
     <v-container fluid style="background: linear-gradient(white 50%,#cdddfc 50%);">
       <v-row class="d-flex justify-center">
-        <v-col cols="6" class="d-flex justify-center" style="background-color: #3b73ce; color:white">
+        <v-col cols="6" lg="4" class="d-flex justify-center" style="background-color: #3b73ce; color:white">
           <span class="text-h5 text-center">Find a veterinarian near you</span>
         </v-col>
       </v-row>
     </v-container>
     <v-container fluid style="background-color: #cdddfc;" class="h-auto">
-      <v-row class="d-flex justify-center">
+      <v-row class="">
+        <v-col cols="12" class="d-flex justify-center ma-2 mt-6">
+          <AptmtCard></AptmtCard>
+        </v-col>
         <v-col cols="12" class="d-flex justify-center">
           <span class="text-h5 text-center" style="color: #3b73ce;">Suggestions for you</span>
         </v-col>
@@ -83,6 +86,8 @@
 <script setup>
 import DocNear from './components/DocNear.vue';
 import VetNear from './components/VetNear.vue';
+import AptmtCard from './components/AptmtCard.vue';
+
 import { useDate } from 'vuetify'
 
 const LocationPreset = ref("city, district");
@@ -92,9 +97,6 @@ const date = useDate()
 
 const DatePreset = ref("date")
 const DatePick = ref();
-
-
-
 
 const formatted = date.format('Wed Mar 06 2024 00:00:00 GMT-0300 (Brasilia Standard Time)', 'keyboardDate')
 console.log(formatted);
