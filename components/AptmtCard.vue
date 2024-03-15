@@ -5,7 +5,7 @@
                 style="background-color: white;border-right: 1px solid black;">
                 <v-img alt="John" src="/img/blankProfile.webp" aspect-ratio="14/9" cover></v-img>
             </v-col>
-            <v-col cols="8" class="d-flex flex-column justify-space-between">
+            <v-col class="d-flex flex-column justify-space-between pa-6">
                 <div class="d-flex flex-column">
                     <span class="text-lg-h5 text-sm-h6 text-body-1 pb-2" style="color: #4773c8;">
                         {{ title }}
