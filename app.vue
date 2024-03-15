@@ -56,7 +56,12 @@
     <v-container fluid style="background-color: #cdddfc;" class="h-auto">
       <v-row class="">
         <v-col cols="12" class="d-flex justify-center ma-2 mt-6">
-          <AptmtCard></AptmtCard>
+          <v-row class="d-flex justify-center">
+            <v-col cols="10" sm="8" md="5">
+              <AptmtCard></AptmtCard>
+            </v-col>
+          </v-row>
+
         </v-col>
         <v-col cols="12" class="d-flex justify-center">
           <span class="text-h5 text-center" style="color: #3b73ce;">Suggestions for you</span>
