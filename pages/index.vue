@@ -36,7 +36,7 @@
                             <v-btn v-bind="props" style="height: 25px;border-radius: 40px;">
                                 <span v-if="DatePick != ''">{{ date.format(DatePick, "normalDateWithWeekday")
                                     }}</span>
-                                <span v-else>{{ datePreset }}</span>
+                                <span v-else>{{ DatePreset }}</span>
                             </v-btn>
                         </template>
 
