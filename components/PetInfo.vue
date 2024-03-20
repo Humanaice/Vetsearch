@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex flex-column align-center">
-        <div style="position: relative;top: 50px;">
+        <div style="position:relative;top: 50px;">
             <v-avatar size="100" style="border: solid 1px black;">
                 <v-img alt="John" src="/img/blankProfile.webp"></v-img>
             </v-avatar>
